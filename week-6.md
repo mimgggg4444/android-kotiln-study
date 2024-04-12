@@ -3,14 +3,14 @@
 
 ### 
 
-``` kotlin
+```
 activity
 android name = .SecondActivity
 /activity
 ```
 
 
-``` kotlin
+```
 import Intent Bundle AppCompatActivity Button
 class MainActivity AppCompatActivity
   override fun onCreate savedInstanceState Bundle?
