@@ -76,11 +76,75 @@ class MainActivity : AppCompatActivity() {
 
 ### 
 ```
+import Bundle Fragment LayoutInflater View ViewGroup Button
+
+class HomeFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.home_bt1).setOnClickListener {
+            buttonClicked(it)
+        }
+        view.findViewById<Button>(R.id.home_bt2).setOnClickListener {
+            buttonClicked(it)
+        }
+        view.findViewById<Button>(R.id.home_bt3).setOnClickListener {
+            buttonClicked(it)
+        }
+    }
+
+
+    private fun buttonClicked(view: View) {
+        if (view is Button) {
+            (activity as? MainActivity)?.setButtonText(view.text.toString())
+        }
+    }
+}
 
 ```
 
 ### 
 ```
+import Bundle Fragment LayoutInflater View ViewGroup Button R
+
+class MyFragment : Fragment() {
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_my, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.my_btn1).setOnClickListener {
+            buttonClicked(it)
+        }
+        view.findViewById<Button>(R.id.home_bt2).setOnClickListener {
+            buttonClicked(it)
+        }
+    }
+
+    private fun buttonClicked(view: View) {
+        if (view is Button) {
+            (activity as? MainActivity)?.setButtonText(view.text.toString())
+        }
+    }
+}
 
 ```
 
