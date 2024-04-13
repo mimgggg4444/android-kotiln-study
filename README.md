@@ -1,4 +1,11 @@
 # AndroidStudioPlayground
 
 
-1주차 수업내용
+
+### TextInputEditText
+### TextEdit
+
+```
+android:gravity="center"
+        orientation="horizontal"
+```
